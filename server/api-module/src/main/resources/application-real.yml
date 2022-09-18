@@ -38,8 +38,6 @@ spring:
   datasource:
     url: jdbc:mariadb://database:3306/neardb?characterEncoding=utf-8&createDatabaseIfNotExist=true
     driver-class-name: org.mariadb.jdbc.Driver
-    username: root
-    password: ssafy
     initialization-mode: always
     data: classpath:data.sql
   flyway:
@@ -60,9 +58,6 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ssafy.dev@gmail.com # 구글 아이디
-    to-name:  ssafy.dev@gmail.com
-    password: ljufsapoguewlufk # 구글 비밀번호
     properties:
       mail:
         smtp:
@@ -85,13 +80,9 @@ server:
   max-http-header-size: 3145728
   ssl:
     enabled: true
-    key-store-type: PKCS12
-    key-store: classpath:/keystore.p12
-    key-store-password: near0204!
     key-alias: near
   trust:
-    store: classpath:/keystore.p12
-    store.password: near0204!
+
 
 
 aes256:
